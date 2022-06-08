@@ -1,4 +1,4 @@
-package capstone.project.tahun.kedua.danus
+package capstone.project.tahun.kedua.daurnusantara
 
 import android.os.Bundle
 import android.view.View
