@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "525800669225",
+    "project_id": "capstone-daur-nusantara",
+    "storage_bucket": "capstone-daur-nusantara.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525800669225:android:9e5332f8b4d04fdf5a9c38",
+        "android_client_info": {
+          "package_name": "capstone.project.tahun.kedua.daurnusantara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525800669225-bioieubn425ieelgjtea7lh0d2p9ult3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwzEcu2nkpRN42FqIx7j95ixHzanJhlrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525800669225-bioieubn425ieelgjtea7lh0d2p9ult3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

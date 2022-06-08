@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Daur Nusantara</string>
+    <string name="title_home">Daur Nusantara</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="title_profile">Akun</string>
+    <string name="title_bookmarks">Disimpan</string>
+    <string name="username2">Nama Pengguna</string>
+    <string name="email2">Alamat Email Pengguna</string>
+    <string name="logout">Keluar</string>
+    <string name="about_us">Mengenai Kami Daur Nusantara merupakan aplikasi  yang digunakan untuk mencari  kerajinan tangan yang dapat dibuat dari sampah untuk meningkatkan nilai ekonomis serta mengurangi sampah. Pada aplikasi ini terdapat beberapa fitur : 1. Mencari kerajinan tangan berdasarkan foto sampah 2. Menambahkan hasil kerajinan tangan sendiri.</string>
+    <string name="email">Email</string>
+    <string name="quotes1">“Ancaman terbesar bagi bumi adalah percaya bahwa  orang lain akan menyelamatkanya”</string>
+    <string name="danus">Daur Nusantara</string>
+    <string name="quotes2">"Bersama Daur Nusantara,  mari kita menyelamatkan bumi dengan mendaur ulang  sampah. "</string>
+    <string name="emailHint">Masukkan Email Anda</string>
+    <string name="password">Kata Sandi</string>
+    <string name="syaratdanketentuan">Dengan mendaftar, saya setuju terhadap syarat dan ketentuan serta kebijakan DaNus.</string>
+    <string name="login">MASUK</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="register">DAFTAR</string>
+    <string name="camera">camera</string>
+    <string name="cari">Cari</string>
+    <string name="nama_kerajinan">Nama Kerajinan</string>
+    <string name="kerajinan">kerajinan</string>
+    <string name="nama">username</string>
+    <string name="logout">Keluar</string>
+    <string name="info">Daur Nusantara  merupakan aplikasi  yang digunakan  untuk mencari  kerajinan tangan yang  dapat dibuat dari sampah untuk meningkatkan  nilai ekonomis serta mengurangi sampah.</string>
+    <string name="aboutus">Mengenai Kami</string>
+</resources>
