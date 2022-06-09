@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -19,8 +21,8 @@
 
     <View
         android:id="@+id/datauser"
-        android:layout_width="292dp"
-        android:layout_height="163dp"
+        android:layout_width="297dp"
+        android:layout_height="189dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#00000000"
@@ -34,77 +36,64 @@
     <EditText
         android:id="@+id/edit_email"
         android:layout_width="293dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="30dp"
-        android:hint="Email"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/datauser"
-        app:layout_constraintStart_toStartOf="@+id/datauser"
-        app:layout_constraintTop_toTopOf="@+id/datauser" />
+        app:layout_constraintTop_toTopOf="@+id/datauser"
+        tools:layout_editor_absoluteX="50dp" />
 
     <EditText
         android:id="@+id/edit_password"
-        android:layout_width="290dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:hint="Password"
+        android:layout_width="293dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/datauser"
-        app:layout_constraintStart_toStartOf="@+id/datauser"
-        app:layout_constraintTop_toBottomOf="@+id/edit_email" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_email"
+        tools:layout_editor_absoluteX="49dp" />
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="300dp"
+    <TextView
+        android:id="@+id/syarat"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:alpha="1"
-        android:background="@color/tosca"
-        android:text="@string/login"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:textSize="12sp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/syaratdanketentuan"
+        android:textAppearance="@style/email"
+        app:layout_constraintEnd_toEndOf="@+id/datauser"
+        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintStart_toStartOf="@+id/datauser"
         app:layout_constraintTop_toBottomOf="@+id/datauser" />
 
-    <TextView
-        android:id="@+id/belumpunyaakun"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/noakun"
-        android:textAlignment="center"
-        android:textColor="@color/tosca"
+        android:layout_marginTop="100dp"
+        android:alpha="1"
+        android:text="@string/register"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button" />
-
-    <TextView
-        android:id="@+id/toregister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/regis"
-        android:textAlignment="center"
-        android:textColor="@color/tosca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/belumpunyaakun" />
+        app:layout_constraintTop_toBottomOf="@+id/datauser" />
 
     <ProgressBar
         android:id="@+id/loading_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
         android:background="@null"
         android:foregroundGravity="center_horizontal"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/datauser"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/datauser"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintVertical_bias="0.354" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
