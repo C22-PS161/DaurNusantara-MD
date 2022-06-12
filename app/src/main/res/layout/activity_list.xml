@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rv_user"
+        android:layout_width="match_parent"
+        android:layout_height="525dp"
+        android:background="@color/tosca_100"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/kerjainan1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/vas"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/nama_kerajinan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/vas"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@id/kerjainan1"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/kerajinan2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/kotakpensil"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/kerjainan1" />
+
+        <Button
+            android:id="@+id/nama_kerajinan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="136dp"
+            android:text="@string/kotak_pensil"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@id/kerajinan2"
+            card_view:layout_constraintTop_toBottomOf="@id/nama_kerajinan1" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/kerajinan3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/celengan"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/kerajinan2" />
+
+        <Button
+            android:id="@+id/nama_kerajinan3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="128dp"
+            android:text="@string/celengan"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@id/kerajinan3"
+            card_view:layout_constraintTop_toBottomOf="@id/nama_kerajinan2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
