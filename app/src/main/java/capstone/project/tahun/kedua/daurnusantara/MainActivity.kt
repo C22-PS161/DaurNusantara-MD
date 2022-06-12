@@ -7,21 +7,34 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import capstone.project.tahun.kedua.daurnusantara.api.ApiConfig
+import capstone.project.tahun.kedua.daurnusantara.api.FileResponse
+import capstone.project.tahun.kedua.daurnusantara.api.ListCrafts
 import capstone.project.tahun.kedua.daurnusantara.databinding.ActivityMainBinding
+import capstone.project.tahun.kedua.daurnusantara.viewmodel.ViewModelList
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.File
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var  fileResponse: FileResponse
+    private lateinit var viewModelList: ViewModelList
 
     private lateinit var currentPhotoPath:String
 
@@ -63,6 +76,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.title = "Daur Nusantara"
+       // val loginSession = intent.getParcelableExtra<LoginSession>(LOGIN_SESSION) as LoginSession
+       // val filee = intent.getParcelableExtra<FileResponse>(LOGIN_SESSION) as FileResponse
 
         showLoading(false)
 
@@ -75,7 +90,42 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.cameraButton.setOnClickListener { startCamera() }
-        binding.uploadButton.setOnClickListener { uploadImage() }
+
+        binding.uploadButton.setOnClickListener{
+            startActivity(Intent(this@MainActivity, ListActivity::class.java))
+        }
+
+       // binding.uploadButton.setOnClickListener { uploadImage() }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.option_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        setMode(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun setMode(selectedMode: Int){
+        when (selectedMode){
+            R.id.akun -> {
+                moveToAccount()
+            }
+            R.id.tema -> {
+                moveToTheme()
+            }
+        }
+    }
+
+    private fun moveToTheme() {
+        startActivity(Intent(this@MainActivity, PreferenceSetting::class.java))
+    }
+
+    private fun moveToAccount() {
+        startActivity(Intent(this@MainActivity, AkunActivity::class.java))
     }
 
     private fun startCamera() {
@@ -104,13 +154,46 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private val uploadImage() {
+    private fun uploadImage() {
         if (getFile != null) {
             showLoading(true)
             val file = reduceFileImage(getFile as File)
+            val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
+            val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
+                "photo",
+                file.name,
+                requestImageFile
+            )
 
-            val requestImageFile = file.asRequestBody("imager/jpeg".toMediaTypeOrNull())
-            val image
+            val service = ApiConfig.getApiService().upload(imageMultipart)
+
+            service.enqueue(object : Callback<FileResponse> {
+                override fun onResponse(
+                    call: Call<FileResponse>,
+                    response: Response<FileResponse>
+                ) {
+                    if (response.isSuccessful) {
+                        val responseBody = response.body()
+                        if(responseBody != null) {
+                            showLoading(false)
+                            val intent = Intent(this@MainActivity, ListActivity::class.java)
+                            intent.putExtra(ListActivity.EXTRA_RESULT, file)
+                            startActivity(intent)
+                            finish()
+                        }
+                    }
+                    else {
+                        showLoading(false)
+
+                    }
+                }
+                override fun onFailure(call: Call<FileResponse>, t: Throwable) {
+                    Toast.makeText(this@MainActivity, "gagal server", Toast.LENGTH_SHORT).show()
+                }
+            })
+        }
+        else {
+            Toast.makeText(this@MainActivity, "Anda belum memasukkan berkas gambar", Toast.LENGTH_SHORT).show()
         }
     }
 
