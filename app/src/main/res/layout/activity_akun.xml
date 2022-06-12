@@ -8,8 +8,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/foto"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginBottom="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,33 +18,23 @@
         app:layout_constraintVertical_bias="0.154"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        android:background="@drawable/gugu" />
 
-    <TextView
-        android:id="@+id/nama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="@string/nama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.338"
-        app:layout_constraintStart_toEndOf="@+id/foto"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="164dp"
         android:text="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toEndOf="@+id/foto"
-        app:layout_constraintTop_toBottomOf="@+id/nama" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/keluar"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_marginTop="40dp"
         android:text="@string/logout"
@@ -54,42 +44,30 @@
         app:layout_constraintTop_toBottomOf="@+id/foto" />
 
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="292dp"
-        android:layout_height="387dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+    <ImageView
+        android:id="@+id/aboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/tosca_200"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/keluar"
+        android:background="@drawable/sd" />
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:foregroundGravity="center_horizontal"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/keluar" />
-
-    <TextView
-        android:id="@+id/aboutus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/aboutus"
-        android:textColor="@color/tosca_100"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view" />
-
-    <TextView
-        android:id="@+id/info1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/info"
-        android:textColor="@color/tosca_100"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/aboutus"/>
+        app:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.484"
+        card_view:layout_constraintVertical_bias="0.225"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
