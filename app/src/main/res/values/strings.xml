@@ -9,7 +9,6 @@
     <string name="title_bookmarks">Disimpan</string>
     <string name="username2">Nama Pengguna</string>
     <string name="email2">Alamat Email Pengguna</string>
-    <string name="logout">Keluar</string>
     <string name="about_us">Mengenai Kami Daur Nusantara merupakan aplikasi  yang digunakan untuk mencari  kerajinan tangan yang dapat dibuat dari sampah untuk meningkatkan nilai ekonomis serta mengurangi sampah. Pada aplikasi ini terdapat beberapa fitur : 1. Mencari kerajinan tangan berdasarkan foto sampah 2. Menambahkan hasil kerajinan tangan sendiri.</string>
     <string name="email">Email</string>
     <string name="quotes1">“Ancaman terbesar bagi bumi adalah percaya bahwa  orang lain akan menyelamatkanya”</string>
@@ -29,4 +28,12 @@
     <string name="logout">Keluar</string>
     <string name="info">Daur Nusantara  merupakan aplikasi  yang digunakan  untuk mencari  kerajinan tangan yang  dapat dibuat dari sampah untuk meningkatkan  nilai ekonomis serta mengurangi sampah.</string>
     <string name="aboutus">Mengenai Kami</string>
+    <string name="regis">buat disini</string>
+    <string name="noakun">Belum punya akun?</string>
+    <string name="dark">Dark Mode</string>
+    <string name="akun">Akun</string>
+    <string name="tema">Tema</string>
+    <string name="vas">Vas</string>
+    <string name="kotak_pensil">Kotak Pensil</string>
+    <string name="celengan">Celengan</string>
 </resources>
