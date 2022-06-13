@@ -7,7 +7,7 @@
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     
-## dependencies
+## Dependencies
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -30,3 +30,14 @@
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0"
     implementation 'androidx.datastore:datastore-preferences:1.0.0'
+    
+## Permission
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+    
+## Status
+Project is : in progress
